@@ -20,6 +20,8 @@ import app.views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", app.views.MovieListView.as_view(), name="home"),
-    path("movie/<id>/tickets/new", app.views.NewTicketView.as_view(), name="new_ticket"),
+    path(
+        "movie/<id>/tickets/new", app.views.NewTicketView.as_view(), name="new_ticket"
+    ),
     path("ticket/<id>", app.views.TicketDetailView.as_view(), name="ticket_detail"),
 ]
